@@ -30,4 +30,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: socket-relay-server
-        path: /publish/
+        path: ./bin/publish/
