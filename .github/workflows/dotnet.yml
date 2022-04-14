@@ -23,3 +23,11 @@ jobs:
       run: dotnet build --no-restore
 #    - name: Test
 #      run: dotnet test --no-build --verbosity normal
+    - name: Publish
+      run: dotnet publish
+      
+    - name: Upload Server Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: socket-relay-server
+        path: /publish/
