@@ -20,7 +20,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore --configuration Release
 #    - name: Test
 #      run: dotnet test --no-build --verbosity normal
     - name: Publish
@@ -30,4 +30,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: socket-relay-server
-        path: ${{ github.workspace }}/bin/publish/
+        path: ${{ github.workspace }}/bin/Release/net6.0/publish/
